@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const ClassThree = (props) => {
+export const Mode = (props) => {
   const {data} = props;
   const [finalResult,setFinalResult] = useState([]);
   useEffect(()=>{
@@ -19,7 +19,7 @@ export const ClassThree = (props) => {
         modes.push(num);
       }
     });
-    
+
   //same frequency
     if (modes.length === Object.keys(frequencyMap).length) {
       return 'No mode';

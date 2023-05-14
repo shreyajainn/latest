@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const ClassTwo = (props) => {
+export const Median = (props) => {
   const {data} = props;
   const [finalResult,setFinalResult] = useState(0);
   useEffect(()=>{

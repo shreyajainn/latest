@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import dataService from '../../dataservice';
-import { ClassOne } from '../Mean';
-import { ClassTwo } from '../Median';
-import { ClassThree } from '../Mode';
+import { Mean } from '../Mean';
+import { Median } from '../Median';
+import { Mode } from '../Mode';
 import { data } from '../../Wine-Data'
 export const Main = () => {
   const [content, setContent] = useState([])
@@ -54,7 +54,7 @@ export const Main = () => {
               <td> Flavanoids Mean</td>
               {content.map((row, rowIndex) => (
                 <td key={rowIndex}>
-                  <ClassOne data={row.value} />
+                  <Mean data={row.value} />
                 </td>
               ))}
             </tr>
@@ -62,7 +62,7 @@ export const Main = () => {
               <td> Flavanoids Median</td>
               {content.map((row, rowIndex) => (
                 <td key={rowIndex}>
-                  <ClassTwo data={row.value} />
+                  <Median data={row.value} />
                 </td>
               ))}
             </tr>
@@ -70,7 +70,7 @@ export const Main = () => {
               <td> Flavanoids Mode</td>
               {content.map((row, rowIndex) => (
                 <td key={rowIndex}>
-                  <ClassThree data={row.value} />
+                  <Mode data={row.value} />
                 </td>
               ))}
             </tr>
@@ -93,7 +93,7 @@ export const Main = () => {
               <td> Gamma Mean</td>
               {contentGamma.map((row, rowIndex) => (
                 <td key={rowIndex}>
-                  <ClassOne data={row.value} />
+                  <Mean data={row.value} />
                 </td>
               ))}
             </tr>
@@ -101,7 +101,7 @@ export const Main = () => {
               <td> Gamma Median</td>
               {contentGamma.map((row, rowIndex) => (
                 <td key={rowIndex}>
-                  <ClassTwo data={row.value} />
+                  <Median data={row.value} />
                 </td>
               ))}
             </tr>
@@ -109,7 +109,7 @@ export const Main = () => {
               <td> Gamma Mode</td>
               {contentGamma.length > 0 ? contentGamma.map((row, rowIndex) => (
                 <td key={rowIndex}>
-                  <ClassThree data={row.value} />
+                  <Mode data={row.value} />
                 </td>
               )) : "no mode"}
             </tr>

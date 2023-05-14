@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const ClassOne = (props) => {
+export const Mean = (props) => {
   const {data} = props;
   const [finalResult,setFinalResult] = useState(0);
   useEffect(()=>{
