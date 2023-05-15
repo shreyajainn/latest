@@ -14,24 +14,23 @@ export const Mode = (props) => {
       frequencyMap[num] = frequencyMap[num] ? frequencyMap[num] + 1 : 1;
       if (frequencyMap[num] > maxFrequency) {
         maxFrequency = frequencyMap[num];
-        modes = [num];
+        modes = [parseFloat(num).toFixed(3)];
       } else if (frequencyMap[num] === maxFrequency) {
-        modes.push(num);
+        modes.push(parseFloat(num).toFixed(3));
       }
     });
 
   //same frequency
     if (modes.length === Object.keys(frequencyMap).length) {
-      return 'No mode';
+      return modes.join("\n");
     }
-  
-    return modes;
+    return modes.join("\n");
   }
   var result = calculateMode(data);
-  if(result != "No mode")
-  setFinalResult(parseFloat(result).toFixed(3))
-  else
-  setFinalResult("No mode")
+  // if(result != "No mode")
+  setFinalResult(result)
+  // else
+  // setFinalResult("No mode")
 },[])
   return (<div >{finalResult} </div>);
 }

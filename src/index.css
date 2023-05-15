@@ -15,12 +15,14 @@ code {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid black;
+  table-layout:fixed;
 }
 
 .table th, .table td {
   padding: 8px;
   text-align: left;
   border: 1px solid black;
+  overflow:scroll;
 }
 
 .table th {

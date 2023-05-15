@@ -10,7 +10,7 @@ export const Mean = (props) => {
     return mean;
   }
   var result = calculateMean(data);
-  setFinalResult(parseInt(result).toFixed(3))
+  setFinalResult(parseFloat(result).toFixed(3))
 },[])
   return (<div >{finalResult} </div>);
 }
